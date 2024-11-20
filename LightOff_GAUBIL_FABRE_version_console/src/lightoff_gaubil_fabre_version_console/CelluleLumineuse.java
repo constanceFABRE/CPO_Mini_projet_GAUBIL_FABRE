@@ -1,9 +1,9 @@
-package lightoff_gaubil_fabre_version_console;
-
 /*
  * 
  * 
  */
+
+package lightoff_gaubil_fabre_version_console;
 
 /**
  *
