@@ -44,5 +44,6 @@ public class GrilleDeJeu {
             matriceCellules[i][idColonne].activerCellule();
         }
     }
+
 }
     
