@@ -37,3 +37,7 @@ public class CelluleLumineuse {
         return this.etat ? "X" : "O"; // "X" pour allumée, "O" pour éteinte
     }
 }
+
+
+
+
