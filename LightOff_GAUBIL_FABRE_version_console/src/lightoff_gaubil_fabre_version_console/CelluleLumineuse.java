@@ -1,6 +1,6 @@
 /*
  * 
- * 
+ *
  */
 
 package lightoff_gaubil_fabre_version_console;
@@ -17,7 +17,7 @@ public class CelluleLumineuse {
     }
      
     public void activerCellule() {
-        this.etat = !this.etat; // changement d'état, bascule entre éteind et allumé
+        this.etat = !this.etat; // sert à basculer d'un état allumé à celui d'éteint 
     }
      
     public void eteindreCellule() {
@@ -25,11 +25,11 @@ public class CelluleLumineuse {
     }
 
     public boolean estEteint() {
-        return !this.etat; // Savoir si c'est éteins, vérifier
+        return !this.etat; //si la cellule est allumé cela renvoie true, pour obtenir l'état exact de la cellule
     }
 
     public boolean getEtat() {
-        return this.etat; // Savoir si c'est allumée, vérifier
+        return this.etat; // si le résultat est true, alors la cellule est allumée, vérifie si la cellule est éteinte
     }
 
     @Override
