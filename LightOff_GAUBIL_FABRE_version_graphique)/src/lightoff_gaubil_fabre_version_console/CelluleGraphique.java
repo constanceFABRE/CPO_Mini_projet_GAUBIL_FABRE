@@ -39,4 +39,3 @@ public class CelluleGraphique extends JButton {
         g.fillOval(2, 2,w - 4, h - 4);
     }
 }
-   
