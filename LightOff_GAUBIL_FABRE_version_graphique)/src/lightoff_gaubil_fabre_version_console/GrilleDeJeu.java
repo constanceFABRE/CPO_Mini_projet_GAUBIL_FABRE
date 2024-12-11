@@ -92,4 +92,8 @@ public class GrilleDeJeu {
         }
         return sb.toString();// cette méthode ser à écrire la grille sous forme de texte
     }
+
+    boolean estEteinte() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

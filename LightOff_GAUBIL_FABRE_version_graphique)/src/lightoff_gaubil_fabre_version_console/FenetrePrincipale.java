@@ -40,6 +40,49 @@ int nbCoups;
     
     }
     
+  
+    
+    private void verifierFinPartie() {
+        nbCoups++;
+        if (grille.cellulesToutesEteintes()) { // Vérifie si toutes les cellules sont éteintes
+            javax.swing.JOptionPane.showMessageDialog(this, "Partie terminée en " + nbCoups + " coups !");
+            desactiverBoutons(); // Désactive tous les boutons
+        } 
+        else if (nbCoups >= 20) { // Exemple : Limite de 20 coups
+            javax.swing.JOptionPane.showMessageDialog(this, "Vous avez atteint la limite de coups !");
+            desactiverBoutons();
+        }
+    }
+
+    public void desactiverBoutons() {
+        // Désactiver les boutons de colonnes
+        btnColonne0.setEnabled(false);
+        btnColonne1.setEnabled(false);
+        btnColonne2.setEnabled(false);
+        btnColonne3.setEnabled(false);
+        btnColonne4.setEnabled(false);
+        btnColonne5.setEnabled(false);
+        btnColonne6.setEnabled(false);
+        btnColonne7.setEnabled(false);
+        btnColonne8.setEnabled(false);
+        btnColonne9.setEnabled(false);
+
+        // Désactiver les boutons de lignes
+        btnLigne0.setEnabled(false);
+        btnLigne1.setEnabled(false);
+        btnLigne2.setEnabled(false);
+        btnLigne3.setEnabled(false);
+        btnLigne4.setEnabled(false);
+        btnLigne5.setEnabled(false);
+        btnLigne6.setEnabled(false);
+        btnLigne7.setEnabled(false);
+        btnLigne8.setEnabled(false);
+        btnLigne9.setEnabled(false);
+
+        // Désactiver les boutons des diagonales
+        btnDiagonaleMontante.setEnabled(false);
+        btnDiagonaleDescendante.setEnabled(false);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -286,113 +329,136 @@ int nbCoups;
     private void btnLigne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne0ActionPerformed
         this.grille.activerLigneDeCellules(0);
         repaint();
+        verifierFinPartie();
     }//GEN-LAST:event_btnLigne0ActionPerformed
 
     private void btnLigne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne1ActionPerformed
         this.grille.activerLigneDeCellules(1);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne1ActionPerformed
 
     private void btnLigne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne2ActionPerformed
        this.grille.activerLigneDeCellules(2);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne2ActionPerformed
 
     private void btnLigne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne3ActionPerformed
         this.grille.activerLigneDeCellules(3);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne3ActionPerformed
 
     private void btnLigne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne4ActionPerformed
        this.grille.activerLigneDeCellules(4);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne4ActionPerformed
 
     private void btnLigne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne5ActionPerformed
         this.grille.activerLigneDeCellules(5);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne5ActionPerformed
 
     private void btnLigne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne6ActionPerformed
         this.grille.activerLigneDeCellules(6);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne6ActionPerformed
 
     private void btnLigne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne7ActionPerformed
         this.grille.activerLigneDeCellules(7);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne7ActionPerformed
 
     private void btnLigne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne8ActionPerformed
        this.grille.activerLigneDeCellules(8);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne8ActionPerformed
 
     private void btnLigne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne9ActionPerformed
        this.grille.activerLigneDeCellules(9);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnLigne9ActionPerformed
 
     private void btnColonne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne1ActionPerformed
         this.grille.activerColonneDeCellules(1);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne1ActionPerformed
 
     private void btnColonne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne0ActionPerformed
         this.grille.activerColonneDeCellules(0);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne0ActionPerformed
 
     private void btnColonne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne2ActionPerformed
         this.grille.activerColonneDeCellules(2);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne2ActionPerformed
 
     private void btnColonne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne3ActionPerformed
         this.grille.activerColonneDeCellules(3);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne3ActionPerformed
 
     private void btnColonne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne4ActionPerformed
         this.grille.activerColonneDeCellules(4);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne4ActionPerformed
 
     private void btnColonne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne5ActionPerformed
         this.grille.activerColonneDeCellules(5);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne5ActionPerformed
 
     private void btnColonne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne6ActionPerformed
         this.grille.activerColonneDeCellules(6);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne6ActionPerformed
 
     private void btnColonne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne7ActionPerformed
         this.grille.activerColonneDeCellules(7);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne7ActionPerformed
 
     private void btnColonne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne8ActionPerformed
         this.grille.activerColonneDeCellules(8);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne8ActionPerformed
 
     private void btnColonne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne9ActionPerformed
         this.grille.activerColonneDeCellules(9);
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnColonne9ActionPerformed
 
     private void btnDiagonaleMontanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleMontanteActionPerformed
         this.grille.activerDiagonaleMontante();
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnDiagonaleMontanteActionPerformed
 
     private void btnDiagonaleDescendanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleDescendanteActionPerformed
         this.grille.activerDiagonaleDescendante();
 repaint();
+verifierFinPartie();
     }//GEN-LAST:event_btnDiagonaleDescendanteActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -455,4 +521,5 @@ repaint();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
 }

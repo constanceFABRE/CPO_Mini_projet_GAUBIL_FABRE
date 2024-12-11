@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JButton;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/* 
+ *
+ *
  */
 
 /**
@@ -32,7 +32,7 @@ public class CelluleGraphique extends JButton {
         int w = this.getWidth();
         int h = this.getHeight();
         if (celluleLumineuseAssociee.estEteint()== true){
-            g.setColor(Color.black);
+            g.setColor(Color.pink);
         }else{
             g.setColor(Color.yellow);
         }
