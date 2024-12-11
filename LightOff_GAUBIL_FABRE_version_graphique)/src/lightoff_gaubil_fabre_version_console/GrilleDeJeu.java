@@ -80,6 +80,23 @@ public class GrilleDeJeu {
         }// si on enleve cette étape, cela ne changera rien pour les cellules éteintes mais si elles sont allumées, le méthode ne renverra pas falseet donc continura à vérifier toutes les autres cellules 
         return true;
     }
+    
+    // Nouvelle méthode pour inverser une cellule spécifique (utilisée par le joker)
+    public void activerCellule(int ligne, int colonne) {
+        if (ligne >= 0 && ligne < nbLignes && colonne >= 0 && colonne < nbColonnes) {
+            matriceCellules[ligne][colonne].activerCellule();
+        }
+    }
+    
+    
+     // Accesseurs pour le nombre de lignes et de colonnes
+    public int getNbLignes() {
+        return nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return nbColonnes;
+    }
 
     @Override
     public String toString() {
@@ -91,9 +108,5 @@ public class GrilleDeJeu {
             sb.append("\n");
         }
         return sb.toString();// cette méthode ser à écrire la grille sous forme de texte
-    }
-
-    boolean estEteinte() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
