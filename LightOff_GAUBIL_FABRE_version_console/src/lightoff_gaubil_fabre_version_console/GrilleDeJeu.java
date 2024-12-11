@@ -6,8 +6,8 @@ package lightoff_gaubil_fabre_version_console;
  *
  * @author vtino
  */
-import java.util.Random;
 
+import java.util.Random;
 public class GrilleDeJeu {
     private CelluleLumineuse[][] matriceCellules; // on a créer une matrice en guise de grille de jeu
     private int nbLignes; // on a utiliser private pour que la grille soit accsessible que depuis l'intérieur de la classe GrilleDeJeu
@@ -80,15 +80,26 @@ public class GrilleDeJeu {
         }// si on enleve cette étape, cela ne changera rien pour les cellules éteintes mais si elles sont allumées, le méthode ne renverra pas falseet donc continura à vérifier toutes les autres cellules 
         return true;
     }
+
     
-    //pour inverser une cellule specifique utilisation du joker 
-        public void activerCellule(int ligne, int colonne) {
+    // Nouvelle méthode pour inverser une cellule spécifique (utilisée par le joker)
+    public void activerCellule(int ligne, int colonne) {
         if (ligne >= 0 && ligne < nbLignes && colonne >= 0 && colonne < nbColonnes) {
             matriceCellules[ligne][colonne].activerCellule();
         }
     }
+    
+    
+     // Accesseurs pour le nombre de lignes et de colonnes
+    public int getNbLignes() {
+        return nbLignes;
+    }
 
-
+    public int getNbColonnes() {
+        return nbColonnes;
+    }
+    
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -100,14 +111,4 @@ public class GrilleDeJeu {
         }
         return sb.toString();// cette méthode ser à écrire la grille sous forme de texte
     }
-    
-        int getNbLignes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    int getNbColonnes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
-
-
