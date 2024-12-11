@@ -17,7 +17,7 @@ public class CelluleGraphique extends JButton {
         int largeur; // largeur en pixel de la cellule
         int hauteur; // hauteur en pixel de la cellule
         CelluleLumineuse celluleLumineuseAssociee;
-    
+   
         // constructeur (appelé depuis FenetrePrincipale)
     public CelluleGraphique(CelluleLumineuse celluleLumineuseAssociee, int l,int h) {
         this.largeur = l;
