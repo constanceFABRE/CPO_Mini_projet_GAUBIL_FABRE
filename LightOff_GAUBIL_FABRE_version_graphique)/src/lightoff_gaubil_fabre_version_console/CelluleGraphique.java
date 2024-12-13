@@ -19,7 +19,7 @@ public class CelluleGraphique extends JButton {
         CelluleLumineuse celluleLumineuseAssociee;
    
         // constructeur (appelé depuis FenetrePrincipale)
-    public CelluleGraphique(CelluleLumineuse celluleLumineuseAssociee, int l,int h) {
+    public CelluleGraphique(CelluleLumineuse celluleLumineuseAssociee, int l, int h) {
         this.largeur = l;
         this.hauteur = h;
         this.celluleLumineuseAssociee = celluleLumineuseAssociee;
