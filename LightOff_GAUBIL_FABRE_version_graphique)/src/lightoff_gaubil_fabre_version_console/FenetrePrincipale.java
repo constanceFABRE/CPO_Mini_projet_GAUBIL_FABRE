@@ -22,7 +22,17 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     public FenetrePrincipale(int taille) {
     initComponents();
-   
+     switch (taille) {
+            case 5:
+                nbCoups = 25; 
+                break;
+            case 7:
+                nbCoups = 18; 
+                break;
+            case 10:
+                nbCoups = 10; 
+                break;
+    }
     
         // Adapter le panneau des colonnes
         jPanel1.removeAll();

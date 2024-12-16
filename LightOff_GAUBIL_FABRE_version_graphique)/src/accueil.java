@@ -49,7 +49,7 @@ public class accueil extends javax.swing.JFrame {
         });
 
         jTextField2.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField2.setText("Le but est d'éteindre toutes les lumière (jaune) en un minimum de coups");
+        jTextField2.setText("Le but est d'éteindre toutes les lumières (jaune) en un minimum de coups");
 
         jTextField3.setBackground(new java.awt.Color(255, 204, 204));
         jTextField3.setText("Pour choisir ton niveau, appuie sur OK :");
