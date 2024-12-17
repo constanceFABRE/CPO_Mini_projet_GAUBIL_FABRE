@@ -1,5 +1,4 @@
-
-import lightoff_gaubil_fabre_version_console.FenetrePrincipale;
+package InterfaceGraphique;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

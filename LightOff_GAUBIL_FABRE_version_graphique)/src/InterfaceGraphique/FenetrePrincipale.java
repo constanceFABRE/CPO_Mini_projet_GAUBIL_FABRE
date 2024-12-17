@@ -2,14 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package lightoff_gaubil_fabre_version_console;
+package InterfaceGraphique;
 
 
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.SwingUtilities;
-import lightoff_gaubil_fabre_version_console.CelluleLumineuse;
+import lightoff_gaubil_fabre_version_console.CelluleGraphique;
 import lightoff_gaubil_fabre_version_console.GrilleDeJeu;
+
 
 /**
  *
@@ -509,14 +510,16 @@ repaint();
 
     private void btnDiagonaleMontanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleMontanteActionPerformed
         this.grille.activerDiagonaleMontante();
-repaint();
-
+        repaint();
+        verifierVictoire();
+        NombreDeCoupsRestants();
     }//GEN-LAST:event_btnDiagonaleMontanteActionPerformed
 
     private void btnDiagonaleDescendanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleDescendanteActionPerformed
         this.grille.activerDiagonaleDescendante();
-repaint();
-
+        repaint();
+        verifierVictoire();
+        NombreDeCoupsRestants();
     }//GEN-LAST:event_btnDiagonaleDescendanteActionPerformed
 
     
