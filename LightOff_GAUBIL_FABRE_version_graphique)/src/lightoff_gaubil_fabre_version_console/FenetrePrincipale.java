@@ -7,6 +7,7 @@ package lightoff_gaubil_fabre_version_console;
 
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.SwingUtilities;
 import lightoff_gaubil_fabre_version_console.CelluleLumineuse;
 import lightoff_gaubil_fabre_version_console.GrilleDeJeu;
 
@@ -17,6 +18,7 @@ import lightoff_gaubil_fabre_version_console.GrilleDeJeu;
 public class FenetrePrincipale extends javax.swing.JFrame {
     GrilleDeJeu grille;
     int nbCoups;
+    int CoupsRestants;
     /**
      * Creates new form FenetrePrincipale
      */
@@ -28,11 +30,17 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         // Initialisation du nombre de coups en fonction de la taille
         switch (taille) {
-            case 5 -> nbCoups = 25;
-            case 7 -> nbCoups = 18;
-            case 10 -> nbCoups = 10;
+            case 5:
+                CoupsRestants = 25;
+                break;
+            case 7:
+                CoupsRestants = 18;
+                break;
+            case 10:
+                CoupsRestants = 15;
+                break;
         }
-
+        
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -43,6 +51,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 grille.activerColonneDeCellules(colIndex);
                 repaint();
                 verifierVictoire();
+                NombreDeCoupsRestants();
             });
             jPanel1.add(btnColonne);
         }
@@ -57,6 +66,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 grille.activerLigneDeCellules(rowIndex);
                 repaint();
                 verifierVictoire();
+                NombreDeCoupsRestants();
             });
             jPanel2.add(btnLigne);
         }
@@ -96,7 +106,24 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
         return true;
     }
-
+    /**
+     * Méthode qui vérifie le nombre de coups restants
+     * Si le nombre de coups est à 0, ouvre la fenêtre de défaite
+     */
+    private void NombreDeCoupsRestants() {
+        if (CoupsRestants == 0) {
+            // Ouvre une fenêtre de défaite et ferme la fenêtre actuelle
+            Defaite fenetreDefaite = new Defaite();
+            fenetreDefaite.setVisible(true);
+            dispose();
+        } else {
+            // Mettre à jour le nombre de coups restants après chaque action
+            CoupsRestants--;
+            SwingUtilities.invokeLater(() -> {
+                CoupsRestantAfficher.setText("Coups restants : " + CoupsRestants);
+            });
+        }
+    }
     /**
      * Arrête le jeu et affiche un message si toutes les lumières sont éteintes
      */
@@ -143,6 +170,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnLigne7 = new javax.swing.JButton();
         btnLigne8 = new javax.swing.JButton();
         btnLigne9 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        CoupsRestantAfficher = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 600));
@@ -180,7 +209,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         getContentPane().add(btnDiagonaleDescendante, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(20, 400));
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         btnColonne0.setText("0");
         btnColonne0.addActionListener(new java.awt.event.ActionListener() {
@@ -347,6 +376,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel2.add(btnLigne9);
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 50, 400));
+
+        jPanel3.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        CoupsRestantAfficher.setText(" ");
+        jPanel3.add(CoupsRestantAfficher, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 6, 350, 40));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 380, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -519,6 +556,7 @@ repaint();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CoupsRestantAfficher;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne0;
     private javax.swing.JButton btnColonne1;
@@ -544,5 +582,6 @@ repaint();
     private javax.swing.JButton btnLigne9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
