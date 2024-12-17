@@ -39,6 +39,7 @@ public class choisirniveau extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NivD.setBackground(new java.awt.Color(255, 102, 102));
         NivD.setText("Niveau débutant ");
@@ -47,6 +48,7 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivDActionPerformed(evt);
             }
         });
+        jPanel1.add(NivD, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 165, -1, -1));
 
         NivC.setBackground(new java.awt.Color(255, 102, 102));
         NivC.setText("Niveau confirmé");
@@ -55,6 +57,7 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivCActionPerformed(evt);
             }
         });
+        jPanel1.add(NivC, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 165, -1, -1));
 
         NivE.setBackground(new java.awt.Color(255, 102, 102));
         NivE.setText("Niveau expert ");
@@ -63,63 +66,24 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivEActionPerformed(evt);
             }
         });
+        jPanel1.add(NivE, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 165, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(255, 204, 204));
         jTextField1.setText("25 coups max, taille 5x5");
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 206, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(255, 204, 204));
         jTextField2.setText("18 coups max, taille 7x7");
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 206, -1, -1));
 
         jTextField3.setBackground(new java.awt.Color(255, 204, 204));
         jTextField3.setText("10 coups max, taille 10x10");
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 206, -1, -1));
 
         jTextField4.setBackground(new java.awt.Color(255, 204, 204));
         jTextField4.setFont(new java.awt.Font("Hoefler Text", 0, 48)); // NOI18N
         jTextField4.setText("NIVEAU");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(NivD)
-                .addGap(55, 55, 55)
-                .addComponent(NivC)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(NivE)
-                .addGap(39, 39, 39))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(NivD)
-                    .addComponent(NivC)
-                    .addComponent(NivE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(229, Short.MAX_VALUE))
-        );
+        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 6, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -179,7 +179,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 0));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnDiagonaleMontante.setText("DiagoMontante");
@@ -206,7 +205,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 570, 380, 50));
 
-        PanneauGrille.setBackground(new java.awt.Color(0, 0, 0));
+        PanneauGrille.setBackground(new java.awt.Color(51, 102, 255));
         PanneauGrille.setPreferredSize(new java.awt.Dimension(500, 500));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
