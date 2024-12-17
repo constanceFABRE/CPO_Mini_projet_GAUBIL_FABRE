@@ -20,20 +20,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     /**
      * Creates new form FenetrePrincipale
      */
+      /**
+     * Constructeur de la fenêtre principale
+     */
     public FenetrePrincipale(int taille) {
-    initComponents();
-     switch (taille) {
-            case 5:
-                nbCoups = 25; 
-                break;
-            case 7:
-                nbCoups = 18; 
-                break;
-            case 10:
-                nbCoups = 10; 
-                break;
-    }
-    
+        initComponents();
+
+        // Initialisation du nombre de coups en fonction de la taille
+        switch (taille) {
+            case 5 -> nbCoups = 25;
+            case 7 -> nbCoups = 18;
+            case 10 -> nbCoups = 10;
+        }
+
         // Adapter le panneau des colonnes
         jPanel1.removeAll();
         jPanel1.setLayout(new GridLayout(1, taille));
@@ -43,11 +42,11 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             btnColonne.addActionListener(evt -> {
                 grille.activerColonneDeCellules(colIndex);
                 repaint();
-               
+                verifierVictoire();
             });
             jPanel1.add(btnColonne);
         }
- 
+
         // Adapter le panneau des lignes
         jPanel2.removeAll();
         jPanel2.setLayout(new GridLayout(taille, 1));
@@ -57,19 +56,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             btnLigne.addActionListener(evt -> {
                 grille.activerLigneDeCellules(rowIndex);
                 repaint();
-               
+                verifierVictoire();
             });
             jPanel2.add(btnLigne);
         }
- 
+
         // Adapter le panneau de la grille principale
         PanneauGrille.removeAll();
         PanneauGrille.setLayout(new GridLayout(taille, taille));
- 
+
         // Créer une nouvelle grille et mélanger
         this.grille = new GrilleDeJeu(taille, taille);
         grille.melangerMatriceAleatoirement(10);
- 
+
         // Ajouter les cellules au panneau
         for (int i = 0; i < taille; i++) {
             for (int j = 0; j < taille; j++) {
@@ -77,7 +76,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 PanneauGrille.add(boutonCellule);
             }
         }
- 
+
         // Rafraîchir les composants
         jPanel1.revalidate();
         jPanel1.repaint();
@@ -85,7 +84,30 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel2.repaint();
         PanneauGrille.revalidate();
         PanneauGrille.repaint();
-}  
+    }
+
+    private boolean estVictoire() {
+        for (int i = 0; i < grille.getNbLignes(); i++) {
+            for (int j = 0; j < grille.getNbColonnes(); j++) {
+                if (!grille.matriceCellules[i][j].estEteint()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Arrête le jeu et affiche un message si toutes les lumières sont éteintes
+     */
+    private void verifierVictoire() {
+        if (estVictoire()) {
+            Victoire fenetreVictoire = new Victoire();
+            fenetreVictoire.setVisible(true);
+            dispose();
+        }
+    }
+ 
    
     /**
      * This method is called from within the constructor to initialize the form.
@@ -523,5 +545,4 @@ repaint();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
-
 }
