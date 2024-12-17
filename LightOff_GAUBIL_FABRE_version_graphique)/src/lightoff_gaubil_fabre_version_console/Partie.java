@@ -1,5 +1,3 @@
-/*
- */
 package lightoff_gaubil_fabre_version_console;
 
 /**
@@ -80,7 +78,7 @@ public class Partie {
             System.out.println("1. Activer une ligne");
             System.out.println("2. Activer une colonne");
             System.out.println("3. Activer diagonale descendante");
-            System.out.println("4. Activer diagonale montante"); 
+            System.out.println("4. Activer diagonale montante");
 
             int choix = scanner.nextInt();
 

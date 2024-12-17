@@ -45,11 +45,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="ND" min="-2" max="-2" attributes="0"/>
+                  <Component id="NivD" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="NC" min="-2" max="-2" attributes="0"/>
+                  <Component id="NivC" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="NE" min="-2" max="-2" attributes="0"/>
+                  <Component id="NivE" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
@@ -78,9 +78,9 @@
                   <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ND" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NC" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NE" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NivD" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NivC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NivE" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -94,7 +94,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="ND">
+        <Component class="javax.swing.JButton" name="NivD">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -102,10 +102,10 @@
             <Property name="text" type="java.lang.String" value="Niveau d&#xe9;butant "/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NDActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NivDActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="NC">
+        <Component class="javax.swing.JButton" name="NivC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -113,10 +113,10 @@
             <Property name="text" type="java.lang.String" value="Niveau confirm&#xe9;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NCActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NivCActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="NE">
+        <Component class="javax.swing.JButton" name="NivE">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -124,7 +124,7 @@
             <Property name="text" type="java.lang.String" value="Niveau expert "/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NEActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NivEActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField1">

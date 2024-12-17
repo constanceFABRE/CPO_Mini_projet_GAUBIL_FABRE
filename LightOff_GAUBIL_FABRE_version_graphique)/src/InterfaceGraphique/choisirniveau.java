@@ -28,9 +28,9 @@ public class choisirniveau extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ND = new javax.swing.JButton();
-        NC = new javax.swing.JButton();
-        NE = new javax.swing.JButton();
+        NivD = new javax.swing.JButton();
+        NivC = new javax.swing.JButton();
+        NivE = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -40,27 +40,27 @@ public class choisirniveau extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
-        ND.setBackground(new java.awt.Color(255, 102, 102));
-        ND.setText("Niveau débutant ");
-        ND.addActionListener(new java.awt.event.ActionListener() {
+        NivD.setBackground(new java.awt.Color(255, 102, 102));
+        NivD.setText("Niveau débutant ");
+        NivD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NDActionPerformed(evt);
+                NivDActionPerformed(evt);
             }
         });
 
-        NC.setBackground(new java.awt.Color(255, 102, 102));
-        NC.setText("Niveau confirmé");
-        NC.addActionListener(new java.awt.event.ActionListener() {
+        NivC.setBackground(new java.awt.Color(255, 102, 102));
+        NivC.setText("Niveau confirmé");
+        NivC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NCActionPerformed(evt);
+                NivCActionPerformed(evt);
             }
         });
 
-        NE.setBackground(new java.awt.Color(255, 102, 102));
-        NE.setText("Niveau expert ");
-        NE.addActionListener(new java.awt.event.ActionListener() {
+        NivE.setBackground(new java.awt.Color(255, 102, 102));
+        NivE.setText("Niveau expert ");
+        NivE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NEActionPerformed(evt);
+                NivEActionPerformed(evt);
             }
         });
 
@@ -83,11 +83,11 @@ public class choisirniveau extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(ND)
+                .addComponent(NivD)
                 .addGap(55, 55, 55)
-                .addComponent(NC)
+                .addComponent(NivC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(NE)
+                .addComponent(NivE)
                 .addGap(39, 39, 39))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,9 +110,9 @@ public class choisirniveau extends javax.swing.JFrame {
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ND)
-                    .addComponent(NC)
-                    .addComponent(NE))
+                    .addComponent(NivD)
+                    .addComponent(NivC)
+                    .addComponent(NivE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,24 +135,24 @@ public class choisirniveau extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NDActionPerformed
-    FenetrePrincipale ND = new FenetrePrincipale(5);
-    ND.setVisible(true);
+    private void NivDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivDActionPerformed
+    FenetrePrincipale NivD = new FenetrePrincipale(5);
+    NivD.setVisible(true);
     this.dispose();
     // TODO add your handling code here:
-    }//GEN-LAST:event_NDActionPerformed
+    }//GEN-LAST:event_NivDActionPerformed
 
-    private void NCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NCActionPerformed
-    FenetrePrincipale NC = new FenetrePrincipale(7);
-    NC.setVisible(true);
+    private void NivCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivCActionPerformed
+    FenetrePrincipale NivC = new FenetrePrincipale(7);
+    NivC.setVisible(true);
     this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_NCActionPerformed
+    }//GEN-LAST:event_NivCActionPerformed
 
-    private void NEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NEActionPerformed
-    FenetrePrincipale NE = new FenetrePrincipale(10);
-    NE.setVisible(true);
+    private void NivEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivEActionPerformed
+    FenetrePrincipale NivE = new FenetrePrincipale(10);
+    NivE.setVisible(true);
     this.dispose();         // TODO add your handling code here:
-    }//GEN-LAST:event_NEActionPerformed
+    }//GEN-LAST:event_NivEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,9 +190,9 @@ public class choisirniveau extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton NC;
-    private javax.swing.JButton ND;
-    private javax.swing.JButton NE;
+    private javax.swing.JButton NivC;
+    private javax.swing.JButton NivD;
+    private javax.swing.JButton NivE;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
