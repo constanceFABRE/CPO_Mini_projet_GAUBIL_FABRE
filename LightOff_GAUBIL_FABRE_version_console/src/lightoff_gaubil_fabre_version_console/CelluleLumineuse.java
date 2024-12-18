@@ -1,76 +1,58 @@
-
 package lightoff_gaubil_fabre_version_console;
 
 /**
- *
+ * Classe CelluleLumineuse - Représente une cellule lumineuse dans le jeu LightOff.
+ * Cette classe fournit des méthodes pour manipuler l'état de la cellule
  * @author constancefabre
  */
-
-/**
- * Représente une cellule lumineuse avec deux états : allumée ou éteinte.
- * La cellule peut être activée, désactivée ou éteinte explicitement.
- * 
- * L'état de la cellule est représenté par un booléen "etat" :
- * - "true" indique que la cellule est allumée.
- * - "false" indique que la cellule est éteinte.
- * 
- * La classe offre également une méthode pour basculer entre les deux états
- * et une méthode pour obtenir une représentation textuelle de l'état.
- */
-
 public class CelluleLumineuse {
     private boolean etat;
     
     /**
-     * Constructeur par défaut de la cellule lumineuse.
-     * Initialise la cellule à l'état éteint.
+     * Constructeur par défaut de la classe CelluleLumineuse.
+     * Initialise la cellule à l'état éteint (false).
      */
     public CelluleLumineuse() {
-        this.etat = false; 
+        this.etat = false; // Cellule éteinte par défaut
     }
-     
-     /**
-     * Active ou désactive la cellule en basculant son état.
-     * Si la cellule est allumée, elle sera éteinte.
-     * Si la cellule est éteinte, elle sera allumée.
+    
+    /**
+     * Change l'état actuel de la cellule.
      */
     public void activerCellule() {
-        this.etat = !this.etat; 
+        this.etat = !this.etat; // sert à basculer d'un état allumé à celui d'éteint 
     }
-     
-     /**
-     * Éteint explicitement la cellule (passe son état à "false").
+    
+    /**
+     * Éteint la cellule en forçant son état à false.
      */
     public void eteindreCellule() {
-        this.etat = false; 
+        this.etat = false; // éteind la cellule 
     }
-
+    
     /**
      * Vérifie si la cellule est éteinte.
-     * 
-     * @return "true" si la cellule est éteinte, "false" si elle est allumée.
+     * @return true si la cellule est éteinte, false sinon.
      */
     public boolean estEteint() {
-        return !this.etat; 
+        return !this.etat; //si la cellule est allumé cela renvoie true, pour obtenir l'état exact de la cellule
     }
 
     /**
-     * Renvoie l'état actuel de la cellule.
-     * 
-     * @return "true" si la cellule est allumée, "false" si elle est éteinte.
-     */
+     * Retourne l'état actuel de la cellule.
+     * @return true si la cellule est allumée, false si elle est éteinte.
+     */    
     public boolean getEtat() {
-        return this.etat; 
+        return this.etat; // si le résultat est true, alors la cellule est allumée, vérifie si la cellule est éteinte
     }
 
     /**
-     * Renvoie une représentation textuelle de l'état de la cellule.
-     * 
+     * Retourne une représentation textuelle de la cellule.
      * @return "X" si la cellule est allumée, "O" si elle est éteinte.
      */
     @Override
     public String toString() {
-        return this.etat ? "X" : "O"; 
+        return this.etat ? "X" : "O"; // "X" pour allumée, "O" pour éteinte
     }
 }
 
