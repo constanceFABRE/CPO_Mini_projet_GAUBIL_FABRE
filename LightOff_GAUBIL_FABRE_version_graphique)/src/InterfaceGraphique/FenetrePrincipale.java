@@ -13,18 +13,17 @@ import lightoff_gaubil_fabre_version_console.GrilleDeJeu;
 
 
 /**
- *
+ * Classe représentant la fenêtre principale du jeu de grille interactive.
+ * Cette fenêtre permet de jouer au jeu où l'objectif est d'éteindre toutes les lumières dans un nombre limité de coups
  * @author constancefabre
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
     GrilleDeJeu grille;
     int nbCoups;
     int CoupsRestants;
+    
     /**
-     * Creates new form FenetrePrincipale
-     */
-      /**
-     * Constructeur de la fenêtre principale
+     * Constructeur de la classe FenetrePrincipale.
      */
     public FenetrePrincipale(int taille) {
         initComponents();
@@ -97,6 +96,10 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.repaint();
     }
 
+    /**
+     * Vérifie si toutes les lumières de la grille sont éteintes.
+     * @return true si toutes les cellules de la grille sont éteintes, false sinon.
+     */
     private boolean estVictoire() {
         for (int i = 0; i < grille.getNbLignes(); i++) {
             for (int j = 0; j < grille.getNbColonnes(); j++) {
@@ -126,7 +129,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         }
     }
     /**
-     * Arrête le jeu et affiche un message si toutes les lumières sont éteintes
+     * Arrête le jeu et renvoie vers la Fenetre Victoire si toutes les lumières sont éteintes.
      */
     private void verifierVictoire() {
         if (estVictoire()) {
@@ -417,122 +420,106 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private void btnLigne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne0ActionPerformed
         this.grille.activerLigneDeCellules(0);
         repaint();
-       
     }//GEN-LAST:event_btnLigne0ActionPerformed
 
     private void btnLigne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne1ActionPerformed
         this.grille.activerLigneDeCellules(1);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnLigne1ActionPerformed
 
     private void btnLigne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne2ActionPerformed
-       this.grille.activerLigneDeCellules(2);
-repaint();
-
+        this.grille.activerLigneDeCellules(2);
+        repaint();
     }//GEN-LAST:event_btnLigne2ActionPerformed
 
     private void btnLigne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne3ActionPerformed
         this.grille.activerLigneDeCellules(3);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnLigne3ActionPerformed
 
     private void btnLigne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne4ActionPerformed
-       this.grille.activerLigneDeCellules(4);
-repaint();
-
+        this.grille.activerLigneDeCellules(4);
+        repaint();
     }//GEN-LAST:event_btnLigne4ActionPerformed
 
     private void btnLigne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne5ActionPerformed
         this.grille.activerLigneDeCellules(5);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnLigne5ActionPerformed
 
     private void btnLigne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne6ActionPerformed
         this.grille.activerLigneDeCellules(6);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnLigne6ActionPerformed
 
     private void btnLigne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne7ActionPerformed
         this.grille.activerLigneDeCellules(7);
-repaint();
+        repaint();
     }//GEN-LAST:event_btnLigne7ActionPerformed
 
     private void btnLigne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne8ActionPerformed
-       this.grille.activerLigneDeCellules(8);
-repaint();
-
+        this.grille.activerLigneDeCellules(8);
+        repaint();
     }//GEN-LAST:event_btnLigne8ActionPerformed
 
     private void btnLigne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne9ActionPerformed
-       this.grille.activerLigneDeCellules(9);
-repaint();
-
+        this.grille.activerLigneDeCellules(9);
+        repaint();
     }//GEN-LAST:event_btnLigne9ActionPerformed
 
     private void btnColonne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne1ActionPerformed
         this.grille.activerColonneDeCellules(1);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne1ActionPerformed
 
     private void btnColonne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne0ActionPerformed
         this.grille.activerColonneDeCellules(0);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne0ActionPerformed
 
     private void btnColonne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne2ActionPerformed
         this.grille.activerColonneDeCellules(2);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne2ActionPerformed
 
     private void btnColonne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne3ActionPerformed
         this.grille.activerColonneDeCellules(3);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne3ActionPerformed
 
     private void btnColonne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne4ActionPerformed
         this.grille.activerColonneDeCellules(4);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne4ActionPerformed
 
     private void btnColonne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne5ActionPerformed
         this.grille.activerColonneDeCellules(5);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne5ActionPerformed
 
     private void btnColonne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne6ActionPerformed
         this.grille.activerColonneDeCellules(6);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne6ActionPerformed
 
     private void btnColonne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne7ActionPerformed
         this.grille.activerColonneDeCellules(7);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne7ActionPerformed
 
     private void btnColonne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne8ActionPerformed
         this.grille.activerColonneDeCellules(8);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne8ActionPerformed
 
     private void btnColonne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne9ActionPerformed
         this.grille.activerColonneDeCellules(9);
-repaint();
-
+        repaint();
     }//GEN-LAST:event_btnColonne9ActionPerformed
-
+    /**
+     * Active les cellules de la diagonale montante.
+     * @param evt L'événement ActionEvent déclenché par l'appui sur le bouton correspondant.
+     */
     private void btnDiagonaleMontanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleMontanteActionPerformed
         this.grille.activerDiagonaleMontante();
         repaint();
@@ -540,6 +527,10 @@ repaint();
         NombreDeCoupsRestants();
     }//GEN-LAST:event_btnDiagonaleMontanteActionPerformed
 
+    /**
+     * Active les cellules de la diagonale descendante.
+     * @param evt L'événement ActionEvent déclenché par l'appui sur le bouton correspondant.
+     */
     private void btnDiagonaleDescendanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonaleDescendanteActionPerformed
         this.grille.activerDiagonaleDescendante();
         repaint();
@@ -547,19 +538,28 @@ repaint();
         NombreDeCoupsRestants();
     }//GEN-LAST:event_btnDiagonaleDescendanteActionPerformed
 
+    /**
+     * Ouvre une nouvelle fenêtre pour choisir le niveau et ferme la fenêtre actuelle.
+     * @param evt L'événement ActionEvent déclenché par l'appui sur le bouton de retour.
+     */
     private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
         choisirniveau Retour = new choisirniveau();
         Retour.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_RetourActionPerformed
 
+    /**
+     * Quitte l'application.
+     * @param evt L'événement ActionEvent déclenché par l'appui sur le bouton de sortie.
+     */
     private void QuitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitterActionPerformed
         System.exit(0);
     }//GEN-LAST:event_QuitterActionPerformed
 
     
     /**
-     * @param args the command line arguments
+     * Méthode principale pour exécuter l'application.
+     * @param args Les arguments de ligne de commande.
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

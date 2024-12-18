@@ -5,13 +5,14 @@
 package InterfaceGraphique;
 
 /**
- *
+ * Classe représentant la fenêtre de défaite de l'application.
  * @author vtino
  */
 public class Defaite extends javax.swing.JFrame {
 
     /**
-     * Creates new form Defaite
+     * Constructeur de la classe Defaite.
+     * Initialise les composants de l'interface pour afficher la fenêtre de défaite.
      */
     public Defaite() {
         initComponents();
@@ -82,7 +83,8 @@ public class Defaite extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Méthode principale pour exécuter l'application.
+     * @param args Les arguments de ligne de commande.
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

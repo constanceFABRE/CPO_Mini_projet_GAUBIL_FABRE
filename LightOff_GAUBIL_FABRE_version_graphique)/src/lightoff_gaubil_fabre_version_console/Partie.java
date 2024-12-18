@@ -1,20 +1,24 @@
 package lightoff_gaubil_fabre_version_console;
-
-/**
- *
- * @author vtino
- */
-
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Classe Partie  
+ * Gère une partie du jeu LightOff
+ * 
+ * @author valentine GAUBIL constance FABRE
+ */
 public class Partie {
     private GrilleDeJeu grille;
     private int nbCoups;
     private int coupsRestants; // Limite de coups
     private boolean jokerUtilise; // Indique si le joker a été utilisé
 
-    // Constructeur
+    /**
+     * Constructeur de la classe Partie
+     * @param taille La taille de la grille
+     * @param maxCoups Le nombre maximum de coups
+     */
     public Partie(int taille, int maxCoups) {
         this.grille = new GrilleDeJeu(taille, taille);
         this.nbCoups = 0;
@@ -23,7 +27,10 @@ public class Partie {
         grille.melangerMatriceAleatoirement(25); // Mélange initial de la grille
     }
 
-    // Méthode pour choisir une difficulté
+    /**
+     * Méthode statique pour choisir un niveau de difficulté
+     * @return Une instance de Partie correspondant à la difficulté choisie
+     */
     public static Partie choisirDifficulte() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choisissez un niveau de difficulté :");
@@ -45,7 +52,11 @@ public class Partie {
         }
     }
 
-    // Méthode pour utiliser un joker
+    /**
+     * Utilisation du joker
+     * Il inverse aleatoirement 3 cases de la grille 
+     * Il peut etre utilisé une seule fois
+     */
     private void utiliserJoker() {
         if (jokerUtilise) {
             System.out.println("Vous avez déjà utilisé votre joker !");
@@ -62,7 +73,10 @@ public class Partie {
         System.out.println("Joker utilisé ! Trois cases ont été inversées.");
     }
 
-    // Méthode pour lancer une partie
+    /**
+     * Lance la partie
+     * Permet à l'utilisateur de jouer, dans le but de gagné ou perdre
+     */
     public void lancerPartie() {
         Scanner scanner = new Scanner(System.in);
 

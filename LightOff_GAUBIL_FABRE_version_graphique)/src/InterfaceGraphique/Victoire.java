@@ -5,13 +5,14 @@
 package InterfaceGraphique;
 
 /**
- *
+ * Classe représentant la fenêtre de victoire de l'application.
  * @author vtino
  */
 public class Victoire extends javax.swing.JFrame {
 
     /**
-     * Creates new form Victoire
+     * Constructeur de la classe Victoire.
+     * Initialise les composants de la fenêtre de victoire.
      */
     public Victoire() {
         initComponents();
@@ -79,7 +80,8 @@ public class Victoire extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Méthode principale pour exécuter l'application.
+     * @param args Les arguments de ligne de commande.
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

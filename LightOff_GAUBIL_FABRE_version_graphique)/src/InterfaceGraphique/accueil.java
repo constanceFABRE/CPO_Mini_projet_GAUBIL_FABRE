@@ -1,18 +1,18 @@
 package InterfaceGraphique;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
 /**
- *
+ * Classe représentant la fenêtre d'accueil de l'application.
  * @author constancefabre
  */
 public class accueil extends javax.swing.JFrame {
 
     /**
-     * Creates new form accueil
+     * Constructeur de la classe accueil.
+     * Initialise les composants de la fenêtre d'accueil.
      */
     public accueil() {
         initComponents();
@@ -79,6 +79,10 @@ public class accueil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Ouvre la fenêtre de sélection de niveau.
+     * @param evt L'événement déclenché par le clic sur le bouton.
+     */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         choisirniveau lvl = new choisirniveau();
         lvl.setVisible(true);
@@ -86,7 +90,8 @@ public class accueil extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Méthode principale pour exécuter l'application.
+     * @param args Les arguments de ligne de commande.
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

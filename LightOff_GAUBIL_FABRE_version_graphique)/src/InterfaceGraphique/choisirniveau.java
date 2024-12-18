@@ -6,13 +6,17 @@ package InterfaceGraphique;
  */
 
 /**
- *
+ * Permet à l'utilisateur de sélectionner un niveau de difficulté pour le jeu.
+ * - Niveau Débutant : 25 coups maximum, grille 5x5.
+ * - Niveau Confirmé : 18 coups maximum, grille 7x7.
+ * - Niveau Expert : 10 coups maximum, grille 10x10.
  * @author constancefabre
  */
 public class choisirniveau extends javax.swing.JFrame {
 
     /**
-     * Creates new form choisirniveau
+     * Constructeur par défaut de la classe choisirniveau.
+     * Initialise les composants graphiques de la fenêtre et configure l'interface utilisateur.
      */
     public choisirniveau() {
         initComponents();
@@ -103,27 +107,39 @@ public class choisirniveau extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Action associée au bouton "Niveau Débutant".
+     * @param evt L'événement déclenché par l'utilisateur
+     */
     private void NivDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivDActionPerformed
     FenetrePrincipale NivD = new FenetrePrincipale(5);
     NivD.setVisible(true);
     this.dispose();
-    // TODO add your handling code here:
     }//GEN-LAST:event_NivDActionPerformed
-
+    
+    /**
+     * Action associée au bouton "Niveau confirmé".
+     * @param evt L'événement déclenché par l'utilisateur
+     */
     private void NivCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivCActionPerformed
     FenetrePrincipale NivC = new FenetrePrincipale(7);
     NivC.setVisible(true);
-    this.dispose();        // TODO add your handling code here:
+    this.dispose();
     }//GEN-LAST:event_NivCActionPerformed
-
+    
+    /**
+     * Action associée au bouton "Niveau expert".
+     * @param evt L'événement déclenché par l'utilisateur
+     */
     private void NivEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NivEActionPerformed
     FenetrePrincipale NivE = new FenetrePrincipale(10);
     NivE.setVisible(true);
-    this.dispose();         // TODO add your handling code here:
+    this.dispose(); 
     }//GEN-LAST:event_NivEActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Méthode principale pour exécuter l'application.
+     * @param args Les arguments de la ligne de commande.
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
