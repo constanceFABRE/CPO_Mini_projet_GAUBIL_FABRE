@@ -174,9 +174,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnColonne7 = new javax.swing.JButton();
         btnColonne8 = new javax.swing.JButton();
         btnColonne9 = new javax.swing.JButton();
+        Retour = new javax.swing.JButton();
+        Quitter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(600, 600));
+        setLocationByPlatform(true);
+        setMinimumSize(new java.awt.Dimension(870, 650));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -390,6 +393,22 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 510, 40));
 
+        Retour.setText("Retour");
+        Retour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RetourActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Retour, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, -1, -1));
+
+        Quitter.setText("Quitter");
+        Quitter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitterActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Quitter, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 600, -1, -1));
+
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 650));
 
         pack();
@@ -528,6 +547,16 @@ repaint();
         NombreDeCoupsRestants();
     }//GEN-LAST:event_btnDiagonaleDescendanteActionPerformed
 
+    private void RetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetourActionPerformed
+        choisirniveau Retour = new choisirniveau();
+        Retour.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_RetourActionPerformed
+
+    private void QuitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitterActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_QuitterActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -567,6 +596,8 @@ repaint();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CoupsRestantAfficher;
     private javax.swing.JPanel PanneauGrille;
+    private javax.swing.JButton Quitter;
+    private javax.swing.JButton Retour;
     private javax.swing.JButton btnColonne0;
     private javax.swing.JButton btnColonne1;
     private javax.swing.JButton btnColonne2;

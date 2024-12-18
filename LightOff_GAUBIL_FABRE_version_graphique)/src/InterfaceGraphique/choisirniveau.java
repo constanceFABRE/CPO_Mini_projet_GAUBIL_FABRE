@@ -31,14 +31,19 @@ public class choisirniveau extends javax.swing.JFrame {
         NivD = new javax.swing.JButton();
         NivC = new javax.swing.JButton();
         NivE = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(870, 650));
+        setPreferredSize(new java.awt.Dimension(870, 650));
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setMinimumSize(new java.awt.Dimension(870, 650));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NivD.setBackground(new java.awt.Color(255, 102, 102));
@@ -48,7 +53,7 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivDActionPerformed(evt);
             }
         });
-        jPanel1.add(NivD, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 165, -1, -1));
+        jPanel1.add(NivD, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         NivC.setBackground(new java.awt.Color(255, 102, 102));
         NivC.setText("Niveau confirmé");
@@ -57,7 +62,7 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivCActionPerformed(evt);
             }
         });
-        jPanel1.add(NivC, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 165, -1, -1));
+        jPanel1.add(NivC, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
 
         NivE.setBackground(new java.awt.Color(255, 102, 102));
         NivE.setText("Niveau expert ");
@@ -66,34 +71,33 @@ public class choisirniveau extends javax.swing.JFrame {
                 NivEActionPerformed(evt);
             }
         });
-        jPanel1.add(NivE, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 165, -1, -1));
+        jPanel1.add(NivE, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField1.setText("25 coups max, taille 5x5");
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 206, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("NIVEAU");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 870, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField2.setText("18 coups max, taille 7x7");
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 206, -1, -1));
+        jLabel3.setText("10 coups max, taille 10x10");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 300, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
 
-        jTextField3.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField3.setText("10 coups max, taille 10x10");
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 206, -1, -1));
+        jLabel5.setText("18 coups max, taille 7x7");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, -1, 20));
 
-        jTextField4.setBackground(new java.awt.Color(255, 204, 204));
-        jTextField4.setFont(new java.awt.Font("Hoefler Text", 0, 48)); // NOI18N
-        jTextField4.setText("NIVEAU");
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 6, -1, -1));
+        jLabel6.setText("25 coups max, taille 5x5");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
         );
 
         pack();
@@ -157,10 +161,12 @@ public class choisirniveau extends javax.swing.JFrame {
     private javax.swing.JButton NivC;
     private javax.swing.JButton NivD;
     private javax.swing.JButton NivE;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
